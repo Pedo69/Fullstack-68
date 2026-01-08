@@ -12,7 +12,7 @@ function updateInventory(currentInventory, newInventory) {
             currentInventory.push(newItem)
         }
     }
-    return currentInventory
+    return currentInventory.sort((a,b) => a.name.localeCompare(b.name))
 }
 
 const currentInventory = [
@@ -25,6 +25,8 @@ const newInventory = [
   { name: "item1", quantity: 5 },
   { name: "item4", quantity: 7 },
   { name: "item2", quantity: 10 },
+  { name: "item9", quantity: 10 },
+  { name: "item5", quantity: 10 },
 ];
 
 console.log(updateInventory(currentInventory, newInventory));
